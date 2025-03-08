@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lesson 2: Where to Place JavaScript</title>
+    <script>
+        // Internal JavaScript - Runs when the page loads
+        function changeHeading() {
+            document.getElementById("title").innerText = "JavaScript Placement Example";
+        }
+    </script>
+</head>
+<body onload="changeHeading()"> <!-- Inline JavaScript on page load -->
+
+    <h1 id="title">Default Heading</h1>
+    <p>In this lesson, we explore different ways to include JavaScript in an HTML file.</p>
+
+    <!-- Inline JavaScript Example -->
+    <button onclick="alert('Welcome to JavaScript Learning!')">Click Me</button>
+
+    <!-- External JavaScript Example -->
+    <button onclick="changeParagraph()">Change Text</button>
+    <p id="description">This text will change when you click the button.</p>
+
+    <script src="lesson2_script.js"></script> <!-- Linking an external JavaScript file -->
+</body>
+</html>
